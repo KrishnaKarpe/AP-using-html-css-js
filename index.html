@@ -8,39 +8,77 @@
 </head>
 <body>
     <div class="container">
-        <h1>Product Management</h1>
-        <div class="form-group">
-            <label for="sourceOrg">Source Organization:</label>
-            <input type="text" id="sourceOrg">
+        <h1 class="headerr">Product Management</h1>
+        <div class="sidebar">
+            <button onclick="showSection('cloneProductSection')">Clone Product Across Orgs</button>
+            <button onclick="showSection('updateProductSection')">Update Product</button>
+            <button onclick="showSection('listProxiesSection')">List All Proxies</button>
+            <button onclick="showSection('listProductsSection')">List All Products</button>
+            <!-- Add more buttons for future functionalities -->
         </div>
-        <div class="form-group">
-            <label for="targetOrg">Target Organization:</label>
-            <input type="text" id="targetOrg">
+        <div class="content">
+            <div id="cloneProductSection" class="section">
+                <h2>Clone Product Across Orgs</h2>
+                <div class="form-group">
+                    <label for="sourceOrg">Source Organization:</label>
+                    <input type="text" id="sourceOrg">
+                </div>
+                <div class="form-group">
+                    <label for="targetOrg">Target Organization:</label>
+                    <input type="text" id="targetOrg">
+                </div>
+                <div class="form-group">
+                    <label for="sourceToken">Source Token:</label>
+                    <input type="text" id="sourceToken">
+                </div>
+                <div class="form-group">
+                    <label for="targetToken">Target Token:</label>
+                    <input type="text" id="targetToken">
+                </div>
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName">
+                </div>
+                <div class="form-group">
+                    <label for="newProductName">New Product Name:</label>
+                    <input type="text" id="newProductName">
+                </div>
+                <div class="form-group">
+                    <label for="newProductDisplayName">New Product Display Name:</label>
+                    <input type="text" id="newProductDisplayName">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description">
+                </div>
+                <div class="form-group">
+                    <label for="environments">Environments:</label>
+                    <select id="environments">
+                        <option value="apim-dev">apim-dev</option>
+                        <option value="apim-uat-internal">apim-uat-internal</option>
+                        <option value="apim-uat-public">apim-uat-public</option>
+                        <option value="apim-prod-public">apim-prod-public</option>
+                        <option value="apim-prod-internal">apim-prod-internal</option>
+                        <option value="apim-prod-saas">apim-prod-saas</option>
+                    </select>
+                </div>
+                <button onclick="cloneProduct()">Clone Product</button>
+                <pre id="output"></pre>
+            </div>
+            <div id="updateProductSection" class="section">
+                <h2>Update Product</h2>
+                <!-- Add fields for updating a product -->
+            </div>
+            <div id="listProxiesSection" class="section">
+                <h2>List All Proxies</h2>
+                <!-- Add fields for listing all proxies -->
+            </div>
+            <div id="listProductsSection" class="section">
+                <h2>List All Products</h2>
+                <!-- Add fields for listing all products -->
+            </div>
+            <!-- Add more sections for future functionalities -->
         </div>
-        <div class="form-group">
-            <label for="sourceToken">Source Token:</label>
-            <input type="text" id="sourceToken">
-        </div>
-        <div class="form-group">
-            <label for="targetToken">Target Token:</label>
-            <input type="text" id="targetToken">
-        </div>
-        <div class="form-group">
-            <label for="productName">Product Name:</label>
-            <input type="text" id="productName">
-        </div>
-        <div class="form-group">
-            <label for="newProductName">New Product Name:</label>
-            <input type="text" id="newProductName">
-        </div>
-        <div class="form-group">
-            <label for="newProductDisplayName">New Product Display Name:</label>
-            <input type="text" id="newProductDisplayName">
-        </div>
-        <button onclick="cloneProduct()">Clone Product</button>
-        <button onclick="createNewProduct()">Create New Product</button>
-        <button onclick="createProductFromExisting()">Create Product from Existing</button>
-        <pre id="output"></pre>
     </div>
     <script src="script.js"></script>
 </body>

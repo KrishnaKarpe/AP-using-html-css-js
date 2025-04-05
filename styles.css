@@ -6,15 +6,58 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    display: flex;
+    width: 100%;
+            /* text-align: center; */
+            padding: 20px;
+}
+.headerr {
+    /* width: 100%; */
+    text-align: center;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 110px;;
 }
 
-h1 {
-    text-align: center;
+.sidebar {
+    width: 200px;
+    background-color: #007bff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    /* margin-top: 120px; */
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #003f7f;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    /* margin-top: 120px; */
+
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+h1, h2 {
     color: #333;
 }
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Management</h1>
+        <div class="form-group">
+            <label for="sourceOrg">Source Organization:</label>
+            <input type="text" id="sourceOrg">
+        </div>
+        <div class="form-group">
+            <label for="targetOrg">Target Organization:</label>
+            <input type="text" id="targetOrg">
+        </div>
+        <div class="form-group">
+            <label for="sourceToken">Source Token:</label>
+            <input type="text" id="sourceToken">
+        </div>
+        <div class="form-group">
+            <label for="targetToken">Target Token:</label>
+            <input type="text" id="targetToken">
+        </div>
+        <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName">
+        </div>
+        <div class="form-group">
+            <label for="newProductName">New Product Name:</label>
+            <input type="text" id="newProductName">
+        </div>
+        <div class="form-group">
+            <label for="newProductDisplayName">New Product Display Name:</label>
+            <input type="text" id="newProductDisplayName">
+        </div>
+        <button onclick="cloneProduct()">Clone Product</button>
+        <button onclick="createNewProduct()">Create New Product</button>
+        <button onclick="createProductFromExisting()">Create Product from Existing</button>
+        <pre id="output"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
